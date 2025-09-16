@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const Tour = require("../models/tourModel");
 
 // GET /tours

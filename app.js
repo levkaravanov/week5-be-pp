@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const tourRouter = require("./routes/tourRouter");
@@ -12,7 +13,7 @@ connectDB();
 
 // Middleware to parse JSON
 app.use(express.json());
- 
+
 // Use the tourRouter for all "/tours" routes
 app.use("/api/tours", tourRouter);
 
@@ -27,4 +28,3 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
- 
