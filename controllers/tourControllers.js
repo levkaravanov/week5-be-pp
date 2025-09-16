@@ -76,7 +76,7 @@ const deleteTour = async (req, res) => {
   try {
     const deletedTour = await Tour.findOneAndDelete({ _id: tourId });
     if (deletedTour) {
-      res.status(200).json({ message: "Tour deleted successfully" });
+      res.status(204).send();
     } else {
       res.status(404).json({ message: "Tour not found" });
     }
